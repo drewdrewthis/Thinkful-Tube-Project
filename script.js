@@ -19,14 +19,16 @@ function makeTubeList(tubes) {
 		console.log(thumb);
 		console.log(url);
 
-		var html = '<div class="tubeBox">\
-						<a href="'+url+'">\
+		var html = '<div class="tubebox col-xs-12 col-md-4 col-lg-3">\
+						<a href="'+url+'" class="thumbnail">\
 							<img src="'+thumb+'"/>\
-							<span class="tube-title">'+title+'"</span>\
+							<div class="caption">\
+								<h3 class="tube-title">'+title+'"</h3>\
+							</div>\
 						</a>\
 					</div>';
 
-		$('.results-area').append(html);
+		$('.results-area>.row').append(html);
 	});
 }
 

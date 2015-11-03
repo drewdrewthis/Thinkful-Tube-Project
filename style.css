@@ -15,3 +15,28 @@ header input {
   background: #404040;
   padding: 2rem;
 }
+.results-area .tubebox {
+  padding: 1rem;
+}
+.results-area .tubebox .thumbnail {
+  border: 1px solid black;
+  background: black;
+  position: relative;
+}
+.results-area .tubebox .caption {
+  position: absolute;
+  bottom: 7%;
+  background: rgba(0, 0, 0, 0.72);
+  color: white;
+  height: 0px;
+  overflow: hidden;
+  left: 0;
+  padding: 0 2rem;
+  width: 100%;
+}
+.results-area .tubebox .caption h3 {
+  font-size: 1.8rem;
+}
+.results-area .tubebox:hover .caption {
+  height: 75%;
+}

@@ -16,4 +16,35 @@ header {
 .results-area {
 	background: #404040;
 	padding: 2rem;
+
+	.tubebox {
+		padding: 1rem;
+		.thumbnail {
+			border: 1px solid black;
+			background: black;
+			position: relative;
+		}
+		.caption {
+			position: absolute;
+			bottom: 7%;
+			background: rgba(0, 0, 0, 0.72);
+			color: white;
+			height: 0px;
+			overflow: hidden;
+			left: 0;
+			padding: 0 2rem;
+			width: 100%;
+			h3 {
+				font-size: 1.8rem;
+			}
+		}
+
+		&:hover {
+			.caption {
+				height: 75%;
+			}
+		}
+	}
+
+
 }

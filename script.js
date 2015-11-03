@@ -9,9 +9,24 @@ $(function(){
 
 function makeTubeList(tubes) {
 	$.each(tubes, function(index, value) {
-		console.log(tubes[index].snippet.title);
-		console.log(tubes[index].snippet.thumbnails.high.url);
-		console.log("https://www.youtube.com/watch?v="+tubes[index].id.videoId);
+
+		var title = tubes[index].snippet.title,
+			thumb = tubes[index].snippet.thumbnails.high.url,
+			url = "https://www.youtube.com/watch?v="+tubes[index].id.videoId,
+			html = "";
+
+		console.log(title);
+		console.log(thumb);
+		console.log(url);
+
+		var html = '<div class="tubeBox">\
+						<a href="'+url+'">\
+							<img src="'+thumb+'"/>\
+							<span class="tube-title">'+title+'"</span>\
+						</a>\
+					</div>';
+
+		$('.results-area').append(html);
 	});
 }
 
